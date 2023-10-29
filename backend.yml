@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend-deployment
 spec:
-  replicas: 3  # You can adjust the number of replicas as needed
+  replicas: 1  # You can adjust the number of replicas as needed
   selector:
     matchLabels:
       app: backend
@@ -18,17 +18,4 @@ spec:
         ports:
         - containerPort: 3000
 
----
 
-# backend-service.yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: backend-service
-spec:
-  selector:
-    app: backend
-  ports:
-    - protocol: TCP
-      port: 3000
-      targetPort: 3000
