@@ -17,5 +17,9 @@ spec:
         image: 655663222139.dkr.ecr.us-east-1.amazonaws.com/crud-app:react-express-mongodb-backend  # Replace with your backend Docker image>
         ports:
         - containerPort: 3000
-
+        resources:
+          requests:
+            cpu: "100m"  # Request 100 milliCPU (0.1 CPU core)
+          limits:
+            cpu: "500m"   # Limit to 500 milliCPU (0.5 CPU core)
 
