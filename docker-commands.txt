@@ -1,0 +1,12 @@
+aws ecr get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin 655663222139.dkr.ecr.us-east-1.amazonaws.com
+
+sudo docker tag mongo:4.2.0 655663222139.dkr.ecr.us-east-1.amazonaws.com/crud-app:mongo
+
+sudo docker push 655663222139.dkr.ecr.us-east-1.amazonaws.com/crud-app:mongo
+
+
+sudo docker tag react-express-mongodb-backend:latest 655663222139.dkr.ecr.us-east-1.amazonaws.com/crud-app:react-express-mongodb-backend
+sudo docker push 655663222139.dkr.ecr.us-east-1.amazonaws.com/crud-app:react-express-mongodb-backend
+
+sudo docker tag react-express-mongodb-frontend:latest 655663222139.dkr.ecr.us-east-1.amazonaws.com/crud-app:react-express-mongodb-frontend
+sudo docker push 655663222139.dkr.ecr.us-east-1.amazonaws.com/crud-app:react-express-mongodb-frontend
